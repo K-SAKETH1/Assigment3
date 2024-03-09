@@ -1,7 +1,7 @@
 package p1;
 import java.util.Scanner;
 public class DemoMethods6 {
-	public static void main(String args[])
+	public static void main(String args[]) 
 	{
 		Scanner sc = new Scanner(System.in);
 		while(true)
@@ -18,7 +18,7 @@ public class DemoMethods6 {
 				System.exit(0);
 				sc.close();
 			}
-			else if(choice==2)
+			else if(choice>0 && choice<=2)
 			{
 				System.out.print("Enter first integer: ");
 				int int1 = sc.nextInt();
@@ -26,19 +26,15 @@ public class DemoMethods6 {
 				int int2 = sc.nextInt();
 				System.out.print("Enter third integer: ");
 				int int3 = sc.nextInt();
-				Smallest s = new Smallest();
-				System.out.println("Smallest number:- "+s.Smaller(int1,int2,int3));
-			}
-			else
-			{
-				System.out.print("Enter first integer: ");
-				int int1 = sc.nextInt();
-				System.out.print("Enter second integer: ");
-				int int2 = sc.nextInt();
-				System.out.print("Enter third integer: ");
-				int int3 = sc.nextInt();
-				Greater g = new Greater();
-				System.out.println("Greatest number:-"+g.Great(int1,int2,int3));
+				if(choice==1) {
+					Greater g = new Greater();
+					System.out.println("Greatest number:-"+g.Great(int1,int2,int3));
+				}
+				else
+				{
+					Smallest s = new Smallest();
+					System.out.println("Smallest number:- "+s.Smaller(int1,int2,int3));
+				}
 			}
 		}
 	
